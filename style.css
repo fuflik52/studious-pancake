@@ -1,0 +1,846 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    touch-action: manipulation;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-text {
+    color: white;
+    font-family: Inter, sans-serif;
+}
+
+.nickname {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.32px;
+    margin-bottom: 5px;
+}
+
+.rate {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}
+
+.coins-section {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.coins-amount {
+    color: #FFF;
+    text-align: right;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.coins {
+    width: 17.244px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+.connect-wallet-btn {
+    position: absolute;
+    left: 109px;
+    top: 210px;
+    width: 173px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 95px;
+    background: #3F92FF;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.wallet-icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+.click-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.click-image {
+    display: block;
+}
+
+.koala-airdrop-bar {
+    position: absolute;
+    left: 19px;
+    top: 629px;
+    width: 352px;
+    height: 57px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: #111518;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.10);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.koala-airdrop-text {
+    width: 145px;
+    height: 18px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: "SF Pro Display";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.check-btn {
+    position: absolute;
+    left: 271.56px;
+    top: 638.5px;
+    width: 90.64px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #289654;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-text {
+    display: flex;
+    width: 83px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.progress-bar {
+    position: absolute;
+    left: 20px;
+    top: 725px;
+    width: 350px;
+    height: 15px;
+    flex-shrink: 0;
+    border-radius: 73px;
+    background: #1A1B1A;
+}
+
+.progress-fill {
+    width: 227px;
+    height: 15px;
+    flex-shrink: 0;
+    border-radius: 73px;
+    background: linear-gradient(270deg, #2A9D58 0%, #175128 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 255, 255, 0.3) 10px,
+            rgba(255, 255, 255, 0.3) 12px);
+    border-radius: 73px;
+}
+
+.progress-section {
+    position: absolute;
+    left: 20px;
+    top: 696px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.progress-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.progress-text {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.bottom-bar {
+    position: absolute;
+    left: 19px;
+    top: 755px;
+    width: 347px;
+    height: 65px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #1A1B1A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px;
+}
+
+.nav-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.nav-text {
+    color: #535453;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.nav-btn:first-child .nav-text {
+    color: #FFF;
+}
+
+.nav-btn.active .nav-text {
+    color: #FFF;
+}
+
+.nav-btn.active .nav-icon path {
+    fill: #2A9D58;
+}
+
+/* Ада
+птация для разных размеров экранов */
+
+/* Очень маленькие экраны (до 320px) */
+@media (max-width: 320px) {
+    .profile-info {
+        top: 15px;
+        left: 15px;
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nickname {
+        font-size: 14px;
+    }
+
+    .rate {
+        font-size: 12px;
+    }
+
+    .coins-section {
+        top: 15px;
+        right: 15px;
+        gap: 6px;
+    }
+
+    .coins-amount {
+        font-size: 20px;
+    }
+
+    .connect-wallet-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .koala-airdrop-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 290px;
+    }
+
+    .check-btn {
+        right: 15px;
+        left: auto;
+        width: 70px;
+        height: 32px;
+    }
+
+    .progress-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 290px;
+    }
+
+    .progress-fill {
+        width: 65%;
+    }
+
+    .progress-section {
+        left: 15px;
+    }
+
+    .bottom-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 290px;
+        padding: 0 10px;
+    }
+
+    .nav-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .nav-text {
+        font-size: 10px;
+    }
+}
+
+/* Маленькие экраны (321px - 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+    .connect-wallet-btn {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .koala-airdrop-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 345px;
+    }
+
+    .check-btn {
+        right: 15px;
+        left: auto;
+        width: 80px;
+        height: 35px;
+    }
+
+    .progress-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 345px;
+    }
+
+    .progress-fill {
+        width: 65%;
+    }
+
+    .progress-section {
+        left: 15px;
+    }
+
+    .bottom-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 345px;
+    }
+}
+
+/* Средние экраны (376px - 414px) */
+@media (min-width: 376px) and (max-width: 414px) {
+    .connect-wallet-btn {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .koala-airdrop-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 384px;
+    }
+
+    .check-btn {
+        right: 15px;
+        left: auto;
+        width: 85px;
+        height: 36px;
+    }
+
+    .progress-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 384px;
+    }
+
+    .progress-fill {
+        width: 65%;
+    }
+
+    .progress-section {
+        left: 15px;
+    }
+
+    .bottom-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 384px;
+    }
+}
+
+/* Большие мобильные экраны (415px - 480px) */
+@media (min-width: 415px) and (max-width: 480px) {
+    .connect-wallet-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+        height: 38px;
+    }
+
+    .koala-airdrop-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 450px;
+    }
+
+    .check-btn {
+        right: 15px;
+        left: auto;
+        width: 90px;
+        height: 38px;
+    }
+
+    .progress-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 450px;
+    }
+
+    .progress-fill {
+        width: 65%;
+    }
+
+    .progress-section {
+        left: 15px;
+    }
+
+    .bottom-bar {
+        left: 15px;
+        width: calc(100vw - 30px);
+        max-width: 450px;
+    }
+
+    .nav-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .nav-text {
+        font-size: 13px;
+    }
+}
+
+/* Планшеты в портретной ориентации (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .profile-info {
+        top: 30px;
+        left: 30px;
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 55px;
+        height: 55px;
+    }
+
+    .nickname {
+        font-size: 18px;
+    }
+
+    .rate {
+        font-size: 16px;
+    }
+
+    .coins-section {
+        top: 30px;
+        right: 30px;
+        gap: 12px;
+    }
+
+    .coins-amount {
+        font-size: 28px;
+    }
+
+    .connect-wallet-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 280px;
+        width: 200px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .koala-airdrop-bar {
+        left: 30px;
+        top: calc(100vh - 200px);
+        width: calc(100vw - 60px);
+        max-width: 500px;
+        height: 65px;
+        padding-left: 30px;
+    }
+
+    .koala-airdrop-text {
+        font-size: 20px;
+    }
+
+    .check-btn {
+        right: 30px;
+        top: calc(100vh - 191px);
+        width: 100px;
+        height: 42px;
+        left: auto;
+    }
+
+    .progress-section {
+        left: 30px;
+        top: calc(100vh - 140px);
+    }
+
+    .progress-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .progress-text {
+        font-size: 18px;
+    }
+
+    .progress-bar {
+        left: 30px;
+        top: calc(100vh - 115px);
+        width: calc(100vw - 60px);
+        max-width: 500px;
+        height: 18px;
+    }
+
+    .progress-fill {
+        height: 18px;
+    }
+
+    .bottom-bar {
+        left: 30px;
+        top: calc(100vh - 85px);
+        width: calc(100vw - 60px);
+        max-width: 500px;
+        height: 75px;
+        padding: 0 20px;
+    }
+
+    .nav-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-text {
+        font-size: 14px;
+    }
+}
+
+/* Планшеты в ландшафтной ориентации и маленькие десктопы (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 390px;
+        height: 844px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        z-index: -1;
+    }
+
+    .profile-info,
+    .coins-section,
+    .connect-wallet-btn,
+    .click-btn,
+    .koala-airdrop-bar,
+    .check-btn,
+    .progress-section,
+    .progress-bar,
+    .bottom-bar {
+        position: fixed;
+    }
+
+    .profile-info {
+        top: calc(50vh - 400px);
+        left: calc(50vw - 175px);
+    }
+
+    .coins-section {
+        top: calc(50vh - 400px);
+        right: calc(50vw - 175px);
+    }
+
+    .connect-wallet-btn {
+        top: calc(50vh - 200px);
+        left: calc(50vw - 86px);
+    }
+
+    .click-btn {
+        top: 50vh;
+        left: 50vw;
+    }
+
+    .koala-airdrop-bar {
+        top: calc(50vh + 200px);
+        left: calc(50vw - 176px);
+    }
+
+    .check-btn {
+        top: calc(50vh + 209px);
+        left: calc(50vw + 96px);
+    }
+
+    .progress-section {
+        top: calc(50vh + 267px);
+        left: calc(50vw - 175px);
+    }
+
+    .progress-bar {
+        top: calc(50vh + 296px);
+        left: calc(50vw - 175px);
+    }
+
+    .bottom-bar {
+        top: calc(50vh + 326px);
+        left: calc(50vw - 174px);
+    }
+}
+
+/* Большие экраны (1025px+) */
+@media (min-width: 1025px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+    }
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 390px;
+        height: 844px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 25px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        z-index: -1;
+    }
+
+    .profile-info,
+    .coins-section,
+    .connect-wallet-btn,
+    .click-btn,
+    .koala-airdrop-bar,
+    .check-btn,
+    .progress-section,
+    .progress-bar,
+    .bottom-bar {
+        position: fixed;
+    }
+
+    .profile-info {
+        top: calc(50vh - 400px);
+        left: calc(50vw - 175px);
+    }
+
+    .coins-section {
+        top: calc(50vh - 400px);
+        right: calc(50vw - 175px);
+    }
+
+    .connect-wallet-btn {
+        top: calc(50vh - 200px);
+        left: calc(50vw - 86px);
+    }
+
+    .click-btn {
+        top: 50vh;
+        left: 50vw;
+    }
+
+    .koala-airdrop-bar {
+        top: calc(50vh + 200px);
+        left: calc(50vw - 176px);
+    }
+
+    .check-btn {
+        top: calc(50vh + 209px);
+        left: calc(50vw + 96px);
+    }
+
+    .progress-section {
+        top: calc(50vh + 267px);
+        left: calc(50vw - 175px);
+    }
+
+    .progress-bar {
+        top: calc(50vh + 296px);
+        left: calc(50vw - 175px);
+    }
+
+    .bottom-bar {
+        top: calc(50vh + 326px);
+        left: calc(50vw - 174px);
+    }
+}
+
+/* Адаптация для высоких экранов */
+@media (min-height: 900px) and (max-width: 480px) {
+    .koala-airdrop-bar {
+        top: calc(100vh - 250px);
+    }
+
+    .check-btn {
+        top: calc(100vh - 241px);
+    }
+
+    .progress-section {
+        top: calc(100vh - 184px);
+    }
+
+    .progress-bar {
+        top: calc(100vh - 159px);
+    }
+
+    .bottom-bar {
+        top: calc(100vh - 129px);
+    }
+}
+
+/* Адаптация для коротких экранов */
+@media (max-height: 667px) and (max-width: 480px) {
+    .connect-wallet-btn {
+        top: 180px;
+    }
+
+    .koala-airdrop-bar {
+        top: calc(100vh - 180px);
+    }
+
+    .check-btn {
+        top: calc(100vh - 171px);
+    }
+
+    .progress-section {
+        top: calc(100vh - 114px);
+    }
+
+    .progress-bar {
+        top: calc(100vh - 89px);
+    }
+
+    .bottom-bar {
+        top: calc(100vh - 59px);
+    }
+}
